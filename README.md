@@ -11,7 +11,9 @@
 ## Install
 
 ```fish
-$ omf install base16
+omf install base16
+# or
+omf install https://github.com/thep0y/fish-theme-base16
 ```
 
 
