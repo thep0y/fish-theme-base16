@@ -18,17 +18,17 @@ end
 function fish_prompt
   set -l last_status $status
 
-  set -l cyan (set_color cyan)
+  set -l username_color (set_color 699)
   set -l yellow (set_color yellow)
   set -l red (set_color red)
-  set -l blue (set_color blue)
+  set -l hostname_color (set_color 699)
   set -l green (set_color green)
   set -l normal (set_color normal)
   set -l purple (set_color purple)
 
   set -l cwd $yellow(pwd | sed "s:^$HOME:~:")
-  set -l username $cyan(whoami)
-  set -l host $blue(hostname -s)
+  set -l username $username_color(whoami)
+  set -l host $hostname_color(hostname -s)
 
   # Output the prompt, left to right
 
@@ -37,7 +37,7 @@ function fish_prompt
 
   # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
-      echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
+      echo -n -s (set_color -b 699 black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
   end
 
   # Print pwd or full path
