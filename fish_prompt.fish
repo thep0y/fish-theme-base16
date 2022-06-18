@@ -1,4 +1,4 @@
-# name: lavender
+# name: base16
 # ---------------
 # Based on clearance. Display the following bits on the left:
 # - Username
